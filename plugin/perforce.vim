@@ -24,10 +24,10 @@ command P4movetocl call perforce#P4CallPromptMoveToChangelist()
 
 " Settings
 
-" g:perforce_open_on_change (0|1, default: 0)
+" g:perforce_open_on_change (0|1, default: 1)
 " Try to open the file in perforce when modifying a read-only file
 if !exists('g:perforce_open_on_change')
-  let g:perforce_open_on_change = 0
+  let g:perforce_open_on_change = 1
 endif
 " g:perforce_open_on_save (0|1, default: 1)
 " Try to open the file in perforce when saving a read-only file (:w!)
@@ -44,10 +44,10 @@ endif
 if !exists('g:perforce_use_relative_paths')
   let g:perforce_use_relative_paths = 0
 endif
-" g:perforce_prompt_on_open
+" g:perforce_prompt_on_open (0|1, default 0)
 " Prompt when a file is opened either on change or on save
 if !exists('g:perforce_prompt_on_open')
-  let g:perforce_prompt_on_open = 1
+  let g:perforce_prompt_on_open = 0
 endif
 
 " Events
